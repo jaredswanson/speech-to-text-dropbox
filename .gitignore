@@ -1,0 +1,12 @@
+# Ignore directory contents but keep the directories themselves
+dropbox/*
+output/*
+processed/*
+
+# Keep .gitkeep files to preserve empty directories
+!dropbox/.gitkeep
+!output/.gitkeep
+!processed/.gitkeep
+
+# Ignore log files
+*.log
