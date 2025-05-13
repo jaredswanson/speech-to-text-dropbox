@@ -151,7 +151,7 @@ def move_to_processed(file_path, processed_dir):
     shutil.move(file_path, dest_path)
     logger.info(f"Moved processed file to: {dest_path}")
 
-def process_dropbox(dropbox_dir, output_dir, processed_dir, model_name="base"):
+def process_dropbox(dropbox_dir, output_dir, processed_dir, model_name="turbo"):
     """Process all items in the dropbox directory."""
     if not os.path.exists(dropbox_dir):
         logger.error(f"Dropbox directory not found: {dropbox_dir}")
@@ -202,9 +202,9 @@ def main():
     )
     parser.add_argument(
         "--model", 
-        choices=["tiny", "base", "small", "medium", "large"], 
-        default="base",
-        help="Whisper model to use (default: base)"
+        choices=["tiny", "base", "small", "medium", "large", "turbo"], 
+        default="turbo",
+        help="Whisper model to use (default: turbo)"
     )
     parser.add_argument(
         "--base-dir", 
@@ -231,4 +231,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

@@ -60,17 +60,18 @@ This script requires both Python dependencies and system dependencies:
 
 ### Optional Arguments
 
-- `--model`: Choose Whisper model size (tiny, base, small, medium, large)
+- `--model`: Choose Whisper model size (tiny, base, small, medium, large, turbo)
   ```
   python speech_to_text.py --model medium
   ```
   
   Model sizes trade-off accuracy for speed:
   - tiny: Fastest, least accurate
-  - base: Good balance for most use cases
-  - small: Better accuracy, slower
-  - medium: High accuracy, significantly slower
+  - base: Good balance for small tasks
+  - small: Better accuracy, moderate speed
+  - medium: High accuracy, slower
   - large: Highest accuracy, very slow (recommended only with GPU)
+  - turbo: Excellent balance of speed and accuracy (default)
 
 - `--base-dir`: Specify a different base directory
   ```
@@ -88,6 +89,7 @@ This script requires both Python dependencies and system dependencies:
 - **"No module named 'whisper'"**: Make sure you installed Whisper using the git link above
 - **FFmpeg errors**: Ensure FFmpeg is properly installed and accessible in your PATH
 - **CUDA/GPU errors**: For GPU usage, make sure your PyTorch installation matches your CUDA version
+- **Model not found error**: If you get a model not found error when using "turbo", ensure you have the latest version of Whisper installed
 
 ## License
 
