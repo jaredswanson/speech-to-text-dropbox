@@ -32,7 +32,7 @@ This script requires both Python dependencies and system dependencies:
 
 1. Clone this repository:
    ```
-   git clone https://github.com/yourusername/speech-to-text-dropbox.git
+   git clone https://github.com/yourusername/speech-to-text.git
    cd speech-to-text-dropbox
    ```
 
@@ -53,7 +53,7 @@ This script requires both Python dependencies and system dependencies:
 
 2. Run the script:
    ```
-   python speech_to_text.py
+   python speech-to-text.py
    ```
 
 3. Find transcribed text in the `output` directory
@@ -62,7 +62,7 @@ This script requires both Python dependencies and system dependencies:
 
 - `--model`: Choose Whisper model size (tiny, base, small, medium, large, turbo)
   ```
-  python speech_to_text.py --model medium
+  python speech-to-text.py --model medium
   ```
   
   Model sizes trade-off accuracy for speed:
@@ -75,7 +75,7 @@ This script requires both Python dependencies and system dependencies:
 
 - `--base-dir`: Specify a different base directory
   ```
-  python speech_to_text.py --base-dir /path/to/directory
+  python speech-to-text.py --base-dir /path/to/directory
   ```
 
 ## Directory Structure
